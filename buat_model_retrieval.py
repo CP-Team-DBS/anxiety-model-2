@@ -50,7 +50,7 @@ def buat_dan_simpan_model_robust(file_database, file_vectorizer_config, file_mat
         print(f"\nERROR: Gagal menyimpan model. Error: {e}")
 
 if __name__ == "__main__":
-    database_csv = 'retrieval_database.csv'
+    database_csv = 'api/retrieval_database.csv'
     vectorizer_path = 'api/vectorizer_config.json'
     matrix_path = 'api/tfidf_matrix.npz'
     

@@ -60,7 +60,7 @@ if __name__ == "__main__":
     lemmatizer = WordNetLemmatizer()
 
     try:
-        df = pd.read_csv("dataset.csv")
+        df = pd.read_csv("emotion_detection_model/dataset.csv")
         print("Dataset 'dataset.csv' berhasil dibaca.")
     except FileNotFoundError:
         print("ERROR: Pastikan file 'dataset.csv' berada di folder root proyek Anda.")
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 
     # Simpan konfigurasi tokenizer sebagai file JSON
     tokenizer_config = tokenizer.to_json()
-    file_path = 'tokenizer_config.json'
+    file_path = 'api/tokenizer_config.json'
     try:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(tokenizer_config)
