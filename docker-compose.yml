@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: anoto-journal
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - anoto-network
+
+networks:
+  anoto-network:
+    external: true
